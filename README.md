@@ -145,7 +145,7 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 <br>
 
-### Schedule
+### Scheduled
 
 > Use this section to look at your project week and plan out when and what you want to do.
 
