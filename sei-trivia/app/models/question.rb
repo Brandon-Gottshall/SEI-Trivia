@@ -1,3 +1,3 @@
 class Question < ApplicationRecord
-    belongs_to :cohort
+    belongs_to :category
 end
