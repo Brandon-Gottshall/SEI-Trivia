@@ -179,14 +179,16 @@ Com
 ## Post-MVP
 
 -_Instructor Managment of cohorts, categories, and questions._
-
+####Cohorts
 - _Cohorts should be in flatlist. Swiping on cohort yields options to edit or delete._
 - 	_Circle with Plus icon on bottom right to add a cohort._
 - 	_The user should be prompted to enter their password if they chose the delete option._
-
+-  _The user should be able to view a sub-flatlist with the members listed._
+####Categories and Questions
 - _Categories And Questions managment should be in a flatlist as well._
-- 	_Categories would be similar to _
-- 	__
+- 	_Categories would be similar to implementation of Cohorts._
+-  _Tapping the add icon the user would see preconstructed choices as well as the option for custom entry._
+- 	_Clicking on a category would lead to a nested sub-flatlist showing the Categories' Questions._
 
 -_VS game mode for users to play with other users._
 
