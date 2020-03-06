@@ -76,16 +76,16 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 | SignUp             | FormData            | Allows the user to add themselves to the user table.                               |
 | SignIn             | FormData            | Allows user to access their account.                                               |
 | UserHome           | none                | Dashboard or main menu for the user.                                               |
-| PlayModes          | VS or Solo          | User picks from a solo or vs. mode. This will most likely just be left out of MVP. |
 | CategorySelector   | Selected Categories | User picks categories for the questions.                                           |
 | Game               | Questions           | Game pulls 10 random questions from categories selected and begins game.           |
 | CorrectOrIncorrect | none                | Provides visual reward or encouragement to the user based on their answer choice.  |
 | WinOrLose          | none                | Provides visual reward or encouragement to the user based on >80%<                 |
 
+
 <br>
 
 ### MVP Server (Back End)
-
+Com
 #### ERD Model
 
 <img src="https://i.ibb.co/Pgd8hrv/Untitled-Diagram-2.jpg" alt="Untitled-Diagram-2" border="0">
@@ -178,15 +178,26 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 ## Post-MVP
 
-> Instructor Managment of cohorts, categories, and questions.
+-_Instructor Managment of cohorts, categories, and questions._
 
+- _Cohorts should be in flatlist. Swiping on cohort yields options to edit or delete._
+- 	_Circle with Plus icon on bottom right to add a cohort._
+- 	_The user should be prompted to enter their password if they chose the delete option._
+
+- _Categories And Questions managment should be in a flatlist as well._
+- 	_Categories would be similar to _
+- 	__
+
+-_VS game mode for users to play with other users._
+
+- _Create a game mode selection screen_
 <br>
 
 ***
 
 ## Project Change Log
 
-> This section should be expanded and revised as you work on your project.
+
 
 ## Code Showcase
 
