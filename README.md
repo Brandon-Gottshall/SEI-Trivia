@@ -24,7 +24,7 @@
 
 ## Overview
 
-_**SEI Trivia** is a simple, yet rewarding trivia game targeted at the student of the various Software Enginnering Immersive student at General Assembly. The goal here is to give the students a powerful review code for whenever they have a spare 5-10 minutes to play a round._
+_**SEI Trivia** is a simple, yet rewarding trivia game targeted at students of the various Software Enginnering Immersive cohorts at General Assembly. The goal here is to give the students a powerful review tool that would only require only 5-10 minutes to complete a session._
 ### Permissions
 
 None at this time.
@@ -34,7 +34,7 @@ None at this time.
 ## MVP
 
 
-_The **SEI Trivia** MVP is to create the functionality of the trivia game with a limited amount of questions without the ability to edit content for the instructors._
+_The **SEI Trivia** MVP is to create the functionality of the trivia game with a limited amount of questions and without the ability to edit content for the instructors._
 
 <br>
 
@@ -53,7 +53,7 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 |      React       | _Required for native._ |
 |   React Native   | _Neccesarry for mobile development._ |
 | React Navigation | _For user navigation throughout the application._ |
-|     Ruby on Rails      | _To manage all back-end related activities. (Storing questions, user authentication, etc.)_ |
+|  Ruby on Rails   | _To manage all back-end related activities. (Storing questions, user authentication, etc.)_ |
 
 <br>
 
@@ -74,7 +74,7 @@ _MVP_
 
 | Component          | State               | Description                                                                        |
 |--------------------|---------------------|------------------------------------------------------------------------------------|
-| App                | User                | Root of the entire application.                                                    |
+| App                | User                | Root of the application.                                                    |
 | SignUp             | FormData            | Allows the user to add themselves to the user table.                               |
 | SignIn             | FormData            | Allows user to access their account.                                               |
 | UserHome           | none                | Dashboard or main menu for the user.                                               |
@@ -106,6 +106,8 @@ Com
 
 > Use this section to list a selection of your intended endpoints and their uses. Please list any and all custom-created endpoints.
 
+_MVP_
+
 |Controller|Operation|VERB  |Route        |
 |----------|---------|------|-------------|
 |User      |#view    |GET   |/user/:id    |
@@ -128,10 +130,21 @@ Com
 |Category  |#update  |PUT   |/category/:id|
 |Category  |#delete  |DELETE|/category/:id|
 |Question  |#index   |GET   |/question    |
+|Question  |#view    |GET   |/question/catsearch/:categoryId|
 |Question  |#view    |GET   |/question/:id|
 |Question  |#create  |POST  |/question    |
 |Question  |#update  |PUT   |/question/:id|
 |Question  |#delete  |DELETE|/question/:id|
+
+_PMVP_
+
+|Controller|Operation|VERB  |Route        |
+|----------|---------|------|-------------|
+|CorrectQuestion|#index|GET |/user/:id/CorrectQuestion/   |
+|CorrectQuestion|#view |GET |/user/:id/CorrectQuestion/catsearch/:categoryId|
+|CorrectQuestion|#view |GET |/user/:id/CorrectQuestion/:id   |
+|CorrectQuestion|#create|POST |/user/:id/CorrectQuestion/   |
+|CorrectQuestion|#delete|DELETE |/user/:id/CorrectQuestion/  |
 
 <br>
 
