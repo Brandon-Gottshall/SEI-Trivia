@@ -70,16 +70,28 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 #### Component Breakdown
 
+_MVP_
+
 | Component          | State               | Description                                                                        |
 |--------------------|---------------------|------------------------------------------------------------------------------------|
 | App                | User                | Root of the entire application.                                                    |
 | SignUp             | FormData            | Allows the user to add themselves to the user table.                               |
 | SignIn             | FormData            | Allows user to access their account.                                               |
 | UserHome           | none                | Dashboard or main menu for the user.                                               |
+| UserProfile        | current settings, user image| Edit profile settings                                                      |       | ProfileSettings    | none                | Change Profile Picture or password.                                                |
+| UserHome           | none                | Dashboard or main menu for the user.                                               |
 | CategorySelector   | Selected Categories | User picks categories for the questions.                                           |
 | Game               | Questions           | Game pulls 10 random questions from categories selected and begins game.           |
 | CorrectOrIncorrect | none                | Provides visual reward or encouragement to the user based on their answer choice.  |
 | WinOrLose          | none                | Provides visual reward or encouragement to the user based on >80%<                 |
+
+_PMVP_
+
+| Component          | State               | Description                                                                        |
+|--------------------|---------------------|------------------------------------------------------------------------------------|
+| UserStats          | API data            | Render progress of categories based on correct questions table and number of questions per category.                          |
+| InstructorHome     | none                | Dashboard or main menu for the Instructor.                                         |
+| Managment          | API data            | Nested FlatList to allow for manipulation of course material.                      |
 
 
 <br>
