@@ -54,6 +54,8 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 |   React Native   | _Neccesarry for mobile development._ |
 | React Navigation | _For user navigation throughout the application._ |
 |  Ruby on Rails   | _To manage all back-end related activities. (Storing questions, user authentication, etc.)_ |
+|   AsyncStorage   | _To store user token--essentially user storage._ |
+
 
 <br>
 
