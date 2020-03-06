@@ -61,12 +61,12 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 #### Wireframes
 
-<a href="https://whimsical.com/7dcDvsfRjpNDjEb125MW6S"><img src="https://i.ibb.co/QDxPsMH/Trivia.png" alt="Trivia" border="0"></a>
+<a href="https://whimsical.com/7dcDvsfRjpNDjEb125MW6S"><img src="https://i.ibb.co/GPtg9Xj/Final-Proto.png" alt="Trivia" border="0"></a>
 
 #### Component Hierarchy
 
 
-<img src="https://i.ibb.co/GcC8p1g/ERD-1.jpg" alt="ERD-1" border="0">
+<img src="https://i.ibb.co/1TCnG6d/FinalERD.png" alt="ERD-1" border="0">
 
 #### Component Breakdown
 
@@ -178,17 +178,25 @@ Com
 
 ## Post-MVP
 
+-_User Stats_
+- 	_Based on table of correct questions and numbers of existing questions._
+
+
 -_Instructor Managment of cohorts, categories, and questions._
-####Cohorts
+
+_Cohorts_
+
 - _Cohorts should be in flatlist. Swiping on cohort yields options to edit or delete._
-- 	_Circle with Plus icon on bottom right to add a cohort._
-- 	_The user should be prompted to enter their password if they chose the delete option._
--  _The user should be able to view a sub-flatlist with the members listed._
-####Categories and Questions
+ - _Circle with Plus icon on bottom right to add a cohort._
+ - 	_The user should be prompted to enter their password if they chose the delete option._
+ -  _The user should be able to view a sub-flatlist with the members listed._
+
+_Categories and Questions_
+
 - _Categories And Questions managment should be in a flatlist as well._
-- 	_Categories would be similar to implementation of Cohorts._
--  _Tapping the add icon the user would see preconstructed choices as well as the option for custom entry._
-- 	_Clicking on a category would lead to a nested sub-flatlist showing the Categories' Questions._
+ - _Categories would be similar to implementation of Cohorts._
+ - _Tapping the add icon the user would see preconstructed choices as well as the option for custom entry._
+  -_Clicking on a category would lead to a nested sub-flatlist showing the Categories' Questions._
 
 -_VS game mode for users to play with other users._
 
