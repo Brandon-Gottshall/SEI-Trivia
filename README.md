@@ -127,19 +127,31 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 ## Planning
 
-> You've got a little over a week to reach your Minimum Viable Product. Use these sections to plan out your approach.
-
 <br>
 
 ### Timeframes
 
-> Use this section to estimate the time necessary to build out the various sections of your project. You may include an additional priority matrix, if you desire.
-
-| Task                | Priority | Estimated Time | Actual Time |
-| ------------------- | :------: | :------------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     TBD     |
-| TOTAL               |          |     6 hrs      |     TBD     |
+| Task                      | Priority   | Estimated Time   | Actual Time |
+|---------------------------|------------|------------------|-------------|
+| Build Endpoints           | High       | 7 hrs            |             |
+| Create seed data          | High       | 3 hrs            |             |
+| Authentication            | High       | 7 hrs            |             |
+| SignUp--frontEnd          | High       | 2.5 hrs          |             |
+| SignIn--frontEnd          | High       | 2.5 hrs          |             |
+| User Home                 | High       | 2 hr             |             |
+| CategorySelector          | High       | 5 hr             |             |
+| Game Logic                | High       | 5 hr             |             |
+| Game Screens              | High       | 3 hrs            |             |
+| User Settings             | Medium     | 3 hrs            |             |
+|-------MVP COMPLETE--------|----HIGH----| -----36 hrs------|-------------|
+| Instructor Home           | low        | 2 hr             |             |
+| Instructor Managment Menu | low        | 3 hr             |             |
+| Manage Categories         | low        | 3 hrs            |             |
+| Manage Questions          | low        | 3 hrs            |             |
+| Manage Cohorts            | low        | 3 hrs            |             |
+| Access Panel              | low        | 3 hrs            |             |
+|-------PMVP COMPLETE-------|----low-----|------17 hrs------|-------------|
+|--------Total Time---------|------------| -----53 hrs----- |-------------|
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
@@ -147,20 +159,18 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 ### Scheduled
 
-> Use this section to look at your project week and plan out when and what you want to do.
-
-|  Day   | Deliverables                              |
-| ------ | ----------------------------------------- |
-|Mar 4th | project proposal worksheet / psuedocoding |
-|Mar 5th | project pitch / build out endpoints       |
-|Mar 6th | Build out front-end components            |
-|Mar 7th | OFF                                       |
-|Mar 8th | impliment user auth                       |
-|Mar 9th | styling                                   |
-|Mar 10th| MVP, begin post-MVP                       |
-|Mar 11th| post-MVP                                  |
-|Mar 12th| polishing                                 |
-|Mar 13th| final presentations                       |
+| Day      | Deliverables                                 |
+|----------|----------------------------------------------|
+| Mar 4th  | Prototyping                                  |
+| Mar 5th  | Compile Pitch                                |
+| Mar 6th  | Endpoints/Seed Data                          |
+| Mar 7th  | Seed Data                                    |
+| Mar 8th  | Auth                                         |
+| Mar 9th  | SignUp&In/UserHome                           |
+| Mar 10th | CategorySelector/Game Logic                  |
+| Mar 11th | Game Screens and User Settings---MVP         |
+| Mar 12th | Styling/Instructor Home and Managmement Menu |
+| Mar 13th | Presentations                                |
 
 <br>
 
@@ -168,7 +178,7 @@ _The **SEI Trivia** MVP is to create the functionality of the trivia game with a
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> Instructor Managment of cohorts, categories, and questions.
 
 <br>
 
