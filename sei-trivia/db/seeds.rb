@@ -9,7 +9,7 @@
 # User.create( user_name: '', password_digest: '', cohort_id: 0, profile_img_url: '', first_name: '', last_name: '', role: '', access: '' )
 
 Cohort.create( name: "Blizzard" )
-Unit.create( cohort_id: 1, name: "unit 1", display: true )
+Unit.create( cohort_id: 1, name: "Unit 1", display: true )
 Category.create( unit_id: 1, name: "HTML" )
 Question.create([
     {
