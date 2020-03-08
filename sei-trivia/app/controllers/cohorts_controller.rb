@@ -1,4 +1,5 @@
 class CohortsController < ApplicationController
+  before_action :authorize_request, except: %i[index show]
   before_action :set_cohort, only: [:show, :update, :destroy]
 
   # GET /cohorts

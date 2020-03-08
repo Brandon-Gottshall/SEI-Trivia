@@ -72,7 +72,7 @@ Question.create([
         ans_1: "src=\"http://link.to/photo.jpg\"></img>",
         ans_2: "link=\"http://link.to/photo.jpg\"></img>",
         ans_3: "href=\"http://link.to/photo.jpg\"></img>",
-        ans_4: "location=\"http://link.to/photo.jpg\"></img>"
+        ans_4: "location=\"http://link.to/photo.jpg\"></img>",
         correct_ans: 1
     },
     {
@@ -101,5 +101,5 @@ Question.create([
         ans_3: "is a digital image view.",
         ans_4: "is used to hold links.",
         correct_ans: 2
-    },
+    }
 ])
