@@ -4,7 +4,7 @@ import Button from './shared/Button'
 
 export default function Landing({navigation}) {
 
-const navigateToSignIn = () => navigation.navigate('SignIn')
+const navigateToSignIn = () => {navigation.navigate('SignIn')}
 
     return(
         <View style={styles.container}>
@@ -12,7 +12,6 @@ const navigateToSignIn = () => navigation.navigate('SignIn')
             <Button text="Sign-In" color='white' helper={navigateToSignIn}/>
             <Button text="Sign-Up" color='rgb(81,57,242)'/>
         </View>
-
     )
 }
 
