@@ -4,13 +4,15 @@ import Button from './shared/Button'
 
 export default function Landing({navigation}) {
 
-const navigateToSignIn = () => {navigation.navigate('SignIn')}
+const navigateToSignIn = () => navigation.navigate('SignIn')
+const navigateToSignUp = () => navigation.navigate('SignUp')
 
     return(
         <View style={styles.container}>
             <Text style={styles.text}>SEI Trivia</Text>
             <Button text="Sign-In" color='white' helper={navigateToSignIn}/>
-            <Button text="Sign-Up" color='rgb(81,57,242)'/>
+            <Button text="Sign-Up" color='rgb(81,57,242)'
+                helper={navigateToSignUp}/>
         </View>
     )
 }
