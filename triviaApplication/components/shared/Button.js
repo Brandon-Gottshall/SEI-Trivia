@@ -1,7 +1,10 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 
-export default function Button({helper, text, color, screen}) {
+export default function Button({helper, text, fontColor, color, screen}) {
+    Button.defaultProps = {
+        fontColor: 'white'
+    }
     return(
         <TouchableOpacity
             style={[styles.button, {backgroundColor: color}]}
@@ -9,7 +12,7 @@ export default function Button({helper, text, color, screen}) {
                 () => helper()
             }>
             <View>
-                <Text>
+                <Text style={{color:fontColor}}>
                 {text}
                 </Text>
             </View>

@@ -13,12 +13,14 @@ export default function UserHome({navigation}) {
         <View style={styles.container}>
             <MaterialIcons
                 name='account-circle'
-                size={200}
+                size={250}
                 color='white'
                 style={styles.icon}
                 />
             <Text style={styles.welcome}>Welcome, {firstName}</Text>
             <Text style={styles.motivational}>{randomMotivationalStatement()}</Text>
+            <Button text='Play' color='rgb(81,57,242)'/>
+            <Button text='Profile' color='rgb(81,57,242)'/>
 
         </View>
     )
@@ -37,18 +39,18 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         width:300,
         fontSize: 20,
-        bottom: 200
+        bottom: 100
     },
     motivational: {
         color: 'white',
+        width: 400,
         textAlign: 'center',
         fontStyle: 'italic',
-        width:300,
         fontSize: 20,
-        bottom: 180
+        bottom: 50
     },
     icon: {
-        bottom: 200
+        bottom: 100
     }
 })
 
