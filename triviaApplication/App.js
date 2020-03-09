@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Landing from './components/Landing'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
+import UserHome from './components/UserHome'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
@@ -21,6 +22,8 @@ function App() {
             name="SignIn" component={SignIn}/>
         <Stack.Screen
             name="SignUp" component={SignUp}/>
+        <Stack.Screen
+            name="UserHome" component={UserHome}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

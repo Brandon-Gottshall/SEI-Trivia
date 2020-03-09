@@ -2,9 +2,17 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native'
 import Button from './shared/Button'
 
-export default function SignIn() {
+export default function SignIn({navigation}) {
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
+    const [loggedIn, setLoggedIn] = useState(true)
+
+    const navigateToUserHome = () => {
+        loggedIn ?
+        navigation.navigate('UserHome'):
+        console.log('Login Failed. Please try again.')
+    }
+
     return(
         <View style={styles.container}>
             <Text style={styles.text}>Sign-In</Text>
@@ -21,7 +29,7 @@ export default function SignIn() {
               secureTextEntry={true}
               placeholder='Password'
             />
-        <Button text="Sign-In" color='rgb(81,57,242)'/>
+        <Button text="Sign-In" color='rgb(81,57,242)' helper={navigateToUserHome}/>
         </View>
 
     )

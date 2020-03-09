@@ -44,20 +44,20 @@ export default function Sign() {
               placeholder='Password'
             />
 
-    // While this does work, turns out, it's probably
-     // best to avoid using a dropdown on mobile.
-     // I've found another library for an autocomplete
-     // component.
-     // react-native-autocomplete-input
-     // Will likely implement for pmvp
-
         <ModalDropdown
             style={styles.dropdown} textStyle={styles.dropdownText} dropdownStyle={styles.dropdownDrawer}
             dropdownTextStyle={styles.dropdownTextStyle}
             options={['Blizzard']}/>
+            {
+                // While this does work, turns out, it's probably
+                //  best to avoid using a dropdown on mobile.
+                //  I've found another library for an autocomplete
+                //  component.
+                //  react-native-autocomplete-input
+                //  Will likely implement for pmvp
+            }
 
-
-            <Button text="Sign-In" color='rgb(81,57,242)'/>
+            <Button text="Create Account" color='rgb(81,57,242)'/>
         </View>
 
     )
@@ -86,27 +86,28 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         textAlign: 'center',
         margin: 7
+    },
+    dropdown: {
+        width: 250,
+        margin: 10,
+        height: 40,
+        backgroundColor: 'white'
+    },
+    dropdownText: {
+        textAlign: 'center',
+        top: 10
+    },
+    dropdownDrawer: {
+        width: 250,
+        // This will needed to be changed once more cohorts are added.
+        // I will end up mapping in cohorts.
+        // Set height to cohorts.length * 35
+        height: 35,
+        marginTop: 30,
+        borderWidth: 0
+    },
+    dropdownTextStyle: {
+        backgroundColor: 'rgb(29,138,197)',
+        color: 'white'
     }
-    // ,
-    // dropdown: {
-    //     width: 250,
-    //     margin: 10,
-    //     height: 40,
-    //     backgroundColor: 'white'
-    // },
-    // dropdownText: {
-    //     textAlign: 'center',
-    //     top: 10
-    // },
-    // dropdownDrawer: {
-    //     width: 250,
-    //     // This will needed to be changed once more cohorts are added.
-    //     // I will end up mapping in cohorts.
-    //     // Set height to cohorts.length * 35
-    //     height: 35,
-    //     marginTop: 11
-    // },
-    // dropdownTextStyle: {
-    //     backgroundColor: 'blue'
-    // }
 })
