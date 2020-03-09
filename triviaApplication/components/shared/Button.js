@@ -3,7 +3,8 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 
 export default function Button({helper, text, fontColor, color, screen}) {
     Button.defaultProps = {
-        fontColor: 'white'
+        fontColor: 'white',
+        color:'rgb(81,57,242)'
     }
     return(
         <TouchableOpacity
@@ -13,7 +14,7 @@ export default function Button({helper, text, fontColor, color, screen}) {
             }>
             <View>
                 <Text style={{color:fontColor}}>
-                {text}
+                    {text}
                 </Text>
             </View>
         </TouchableOpacity>

@@ -4,6 +4,7 @@ import Landing from './components/Landing'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import UserHome from './components/UserHome'
+import ProfileSettings from './components/ProfileSettings'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
@@ -24,6 +25,8 @@ function App() {
             name="SignUp" component={SignUp}/>
         <Stack.Screen
             name="UserHome" component={UserHome}/>
+        <Stack.Screen
+            name="ProfileSettings" component={ProfileSettings}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
