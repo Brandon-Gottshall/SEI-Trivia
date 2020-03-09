@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native'
 import Button from './shared/Button'
+import ModalDropdown from 'react-native-modal-dropdown'
 
 export default function Sign() {
     const [userName, setUserName] = useState('')
@@ -42,7 +43,21 @@ export default function Sign() {
               secureTextEntry={true}
               placeholder='Password'
             />
-        <Button text="Sign-In" color='rgb(81,57,242)'/>
+
+    // While this does work, turns out, it's probably
+     // best to avoid using a dropdown on mobile.
+     // I've found another library for an autocomplete
+     // component.
+     // react-native-autocomplete-input
+     // Will likely implement for pmvp
+
+        <ModalDropdown
+            style={styles.dropdown} textStyle={styles.dropdownText} dropdownStyle={styles.dropdownDrawer}
+            dropdownTextStyle={styles.dropdownTextStyle}
+            options={['Blizzard']}/>
+
+
+            <Button text="Sign-In" color='rgb(81,57,242)'/>
         </View>
 
     )
@@ -70,7 +85,28 @@ const styles = StyleSheet.create({
         color: 'gray',
         backgroundColor: 'white',
         textAlign: 'center',
-        margin: 10
-
+        margin: 7
     }
+    // ,
+    // dropdown: {
+    //     width: 250,
+    //     margin: 10,
+    //     height: 40,
+    //     backgroundColor: 'white'
+    // },
+    // dropdownText: {
+    //     textAlign: 'center',
+    //     top: 10
+    // },
+    // dropdownDrawer: {
+    //     width: 250,
+    //     // This will needed to be changed once more cohorts are added.
+    //     // I will end up mapping in cohorts.
+    //     // Set height to cohorts.length * 35
+    //     height: 35,
+    //     marginTop: 11
+    // },
+    // dropdownTextStyle: {
+    //     backgroundColor: 'blue'
+    // }
 })
