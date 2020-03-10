@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 100,
         backgroundColor: "rgb(125,207,196)"
     },
     welcome: {

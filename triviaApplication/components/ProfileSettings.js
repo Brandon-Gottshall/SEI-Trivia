@@ -9,10 +9,11 @@ export default function ProfileSettings() {
         <View style={styles.container}>
 
             <WelcomeBlock/>
-
-            <Button text="Change Profile Picture"/>
-            <Button text="Change Password"/>
-            <Button text="Change Cohort"/>
+            <View style={styles.buttonContainer}>
+                <Button text="Change Profile Picture"/>
+                <Button text="Change Password"/>
+                <Button text="Change Cohort"/>
+            </View>
         </View>
     )
 }
@@ -21,6 +22,10 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         backgroundColor: "rgb(125,207,196)"
-    }})
+    },
+    buttonContainer: {
+        bottom: 80
+    }
+})

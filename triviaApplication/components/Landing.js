@@ -10,7 +10,7 @@ const navigateToSignUp = () => navigation.navigate('SignUp')
     return(
         <View style={styles.container}>
             <Text style={styles.text}>SEI Trivia</Text>
-            <Button text="Sign-In" color='white' helper={navigateToSignIn}/>
+            <Button fontColor='rgb(81,57,242)' text="Sign-In" color='white' helper={navigateToSignIn}/>
             <Button text="Sign-Up" color='rgb(81,57,242)'
                 helper={navigateToSignUp}/>
         </View>

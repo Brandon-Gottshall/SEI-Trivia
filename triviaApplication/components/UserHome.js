@@ -9,12 +9,13 @@ export default function UserHome({navigation}) {
 
 
     const navigateToProfileSettings = () => navigation.navigate('ProfileSettings')
+    const navigateToCategorySelector = () => navigation.navigate('CategorySelector')
 
     return(
         <View style={styles.container}>
             <WelcomeBlock/>
             <View style={styles.buttonContainer} >
-                <Button text='Play' color='rgb(81,57,242)' />
+                <Button text='Play' color='rgb(81,57,242)' helper={navigateToCategorySelector}/>
                 <Button text='Profile' color='rgb(81,57,242)' helper={navigateToProfileSettings}/>
             </View>
 
