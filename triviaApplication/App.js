@@ -5,6 +5,7 @@ import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import UserHome from './components/UserHome'
 import CategorySelector from './components/CategorySelector'
+import UnitSelector from './components/UnitSelector'
 import ProfileSettings from './components/ProfileSettings'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
@@ -28,6 +29,8 @@ function App() {
             name="UserHome" component={UserHome}/>
         <Stack.Screen
             name="ProfileSettings" component={ProfileSettings}/>
+        <Stack.Screen
+            name="UnitSelector" component={UnitSelector}/>
         <Stack.Screen
             name="CategorySelector" component={CategorySelector}/>
       </Stack.Navigator>

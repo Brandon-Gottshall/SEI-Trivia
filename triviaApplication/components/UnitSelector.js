@@ -3,24 +3,24 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native
 import Button from './shared/Button'
 import ListItem from './shared/ListItem'
 
-export default function CategorySelector({navigation}) {
+export default function UnitSelector({navigation}) {
 
 const [updated, setUpdated] = useState(false)
 const [callData, setCallData] = useState([
     {
         id: '1',
-        title: 'HTML',
+        title: 'Unit 1',
         selected: false
     },
     {
         id: '2',
-        title: 'CSS',
+        title: 'Unit 2',
         selected: false
 
     },
     {
         id: '3',
-        title: 'JS Arrays',
+        title: 'Unit 3',
         selected: false
     }
 ])
@@ -86,7 +86,7 @@ const navigateToCategorySelector = () => {
                     <ListItem title={item.title} index={index} selected={data[index]["selected"]} setButtonsSelected={setButtonsSelected}/>
                 )}
                 />
-            <Button text="Next" helper={()=>console.log('going to game')}/>
+            <Button text="Next" helper={navigateToCategorySelector}/>
         </View>
     )
 }
