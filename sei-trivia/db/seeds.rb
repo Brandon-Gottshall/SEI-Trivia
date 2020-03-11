@@ -68,11 +68,11 @@ Question.create([
     },
     {
         category_id: 1,
-        prompt: "How would you complete this tag. <img",
-        ans_1: "src=\"http://link.to/photo.jpg\"></img>",
-        ans_2: "link=\"http://link.to/photo.jpg\"></img>",
-        ans_3: "href=\"http://link.to/photo.jpg\"></img>",
-        ans_4: "location=\"http://link.to/photo.jpg\"></img>",
+        prompt: "How would you complete this tag.",
+        ans_1: "src=\"http://link.to/photo.jpg\">",
+        ans_2: "link=\"http://link.to/photo.jpg\">",
+        ans_3: "href=\"http://link.to/photo.jpg\">",
+        ans_4: "location=\"http://link.to/photo.jpg\">",
         correct_ans: 1
     },
     {
