@@ -66,9 +66,11 @@ const setButtonsSelected = (index) => {
     setUpdated(!updated)
     console.log(newData)
 }
-const navigateToCategorySelector = () => {
+const navigateToLoading = () => {
     if (data[1]["selected"]){
-        navigation.navigate('CategorySelector')
+        navigation.navigate('Loading', {
+            data: data
+        })
     }
 }
     return (
@@ -86,7 +88,7 @@ const navigateToCategorySelector = () => {
                     <ListItem title={item.title} index={index} selected={data[index]["selected"]} setButtonsSelected={setButtonsSelected}/>
                 )}
                 />
-            <Button text="Next" helper={()=>console.log('going to game')}/>
+            <Button text="Next" helper={navigateToLoading}/>
         </View>
     )
 }

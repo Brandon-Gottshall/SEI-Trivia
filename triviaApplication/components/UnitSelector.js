@@ -74,7 +74,7 @@ const navigateToCategorySelector = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.instructions}>
-                Pick One or More Categories
+                Pick One or More Units
             </Text>
             <FlatList
                 data={data}

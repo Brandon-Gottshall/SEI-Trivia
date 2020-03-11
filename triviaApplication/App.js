@@ -7,6 +7,8 @@ import UserHome from './components/UserHome'
 import CategorySelector from './components/CategorySelector'
 import UnitSelector from './components/UnitSelector'
 import ProfileSettings from './components/ProfileSettings'
+import Game from './components/Game'
+import Loading from './components/Loading'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
@@ -33,6 +35,10 @@ function App() {
             name="UnitSelector" component={UnitSelector}/>
         <Stack.Screen
             name="CategorySelector" component={CategorySelector}/>
+        <Stack.Screen
+            name="Loading" component={Loading}/>
+        <Stack.Screen
+            name="Game" component={Game}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
