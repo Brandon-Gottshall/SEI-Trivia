@@ -160,9 +160,9 @@ _PMVP_
 
 | Task                      | Priority   | Estimated Time   | Actual Time |
 |---------------------------|------------|------------------|-------------|
-| Build Endpoints           | High       | 7 hrs            |             |
-| Create seed data          | High       | 3 hrs            |             |
-| Authentication            | High       | 7 hrs            |             |
+| Build Endpoints           | High       | 7 hrs            |    3 hrs    |
+| Create seed data          | High       | 3 hrs            |    1 hr     |
+| Authentication            | High       | 7 hrs            |    2 hr     |
 | SignUp--frontEnd          | High       | 2.5 hrs          |             |
 | SignIn--frontEnd          | High       | 2.5 hrs          |             |
 | User Home                 | High       | 2 hr             |             |

@@ -1,5 +1,6 @@
 class UnitsController < ApplicationController
   before_action :authorize_request, except: %i[index show]
+
   before_action :set_unit, only: [:show, :update, :destroy]
 
   # GET /units
