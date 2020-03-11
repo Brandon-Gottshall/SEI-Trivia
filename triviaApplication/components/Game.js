@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
+import Question from './shared/Question'
 
 export default function Game({route, navigation}) {
     const { questions } = route.params
@@ -9,17 +10,37 @@ export default function Game({route, navigation}) {
 
     useEffect(() => setQuestionsWaiting(questions),[])
 
+    const navigateToGame = (questions) => {
+        navigation.navigate('Game', {
+            questions: questions
+        })
+    }
+
     const render = () => {
         let screen
-        if (questionsWaiting > 0) {
+        if (questionsWaiting.length > 0) {
             let question = questionsWaiting.pop()
-            return <Question question={question}/>
+            return <Question question={question} questionsWaiting={questionsWaiting} qNum={10 - questionsWaiting.length} navigateToGame={navigateToGame}/>
         }
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             {render()}
+            <Text>HELP from GAME</Text>
         </View>
     )
 }
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: "rgb(125,207,196)"
+    },
+    text: {
+        color: 'red',
+        margin: 30,
+        fontSize: 30
+    }
+})

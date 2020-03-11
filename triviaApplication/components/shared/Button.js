@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 
-export default function Button({helper, text, fontColor, color, screen}) {
+export default function Button({ helper, text, fontColor, color, screen }) {
     Button.defaultProps = {
         fontColor: 'white',
         color:'rgb(81,57,242)'

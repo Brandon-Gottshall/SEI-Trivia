@@ -3,42 +3,45 @@ import {View, Text, StyleSheet, TextInput} from 'react-native'
 import Button from './shared/Button'
 import ModalDropdown from 'react-native-modal-dropdown'
 
-export default function Sign() {
+export default function SignUp() {
     const [userName, setUserName] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const handleUsernameChange = () => {
+        set
+    }
     return(
         <View style={styles.container}>
             <Text style={styles.text}>Sign-Up</Text>
             <TextInput
               style={styles.input}
-              onChangeText={text => setUserName(text)}
+              onChangeText={handleUsernameChange}
               value={userName}
               placeholder='User Name'
             />
             <TextInput
               style={styles.input}
-              onChangeText={text => setFirstName(text)}
+              onChangeText={handleFirstnameChange}
               value={firstName}
               placeholder='First Name'
             />
             <TextInput
               style={styles.input}
-              onChangeText={text => setLastName(text)}
+              onChangeText={handleLastnameChange}
               value={lastName}
               placeholder='Last Name'
             />
             <TextInput
               style={styles.input}
-              onChangeText={text => setEmail(text)}
+              onChangeText={handleEmailChange}
               value={email}
               placeholder='Email'
             />
             <TextInput
               style={styles.input}
-              onChangeText={text => setPassword(text)}
+              onChangeText={handlePasswordChange}
               value={password}
               secureTextEntry={true}
               placeholder='Password'
