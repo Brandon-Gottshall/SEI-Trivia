@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-export default function ListItem({ title, index, selected, setButtonsSelected }) {
+export default function ListItem({ name, index, selected, setButtonsSelected }) {
 
     const unitStyleSelector = selected ? styles.unitSelected : styles.unit
     const unitTextStyleSelector = selected ? styles.unitSelectedText : styles.unitText
@@ -11,10 +11,10 @@ export default function ListItem({ title, index, selected, setButtonsSelected })
             style={unitStyleSelector}
             onPress={() => {
                 setButtonsSelected(index)
-                console.log(`${title} selected? : ${selected}`)
+                console.log(`${name} selected? : ${selected}`)
             }}
             >
-            <Text style={unitTextStyleSelector}>{title}</Text>
+            <Text style={unitTextStyleSelector}>{name}</Text>
         </TouchableOpacity>
     )}
 

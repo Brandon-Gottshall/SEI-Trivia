@@ -66,8 +66,8 @@ export default function SignUp({navigation}) {
     //     console.log(res)
     //     navigation.navigate('SignIn')
     // }
-    const handleSubmit = () => {
-        let res = registerUser(userForm)
+    const handleSubmit = async () => {
+        let res = await registerUser(userForm)
         // e.preventDefault()
         console.log(res)
         navigation.navigate('SignIn')

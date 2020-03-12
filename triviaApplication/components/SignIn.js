@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import {View, Text, StyleSheet, TextInput} from 'react-native'
 import Button from './shared/Button'
-import { loginUser } from '../services/api-helper'
+import { loginUser, verifyUser } from '../services/api-helper'
 import { AsyncStorage } from 'react-native'
 
 export default function SignIn({navigation}) {
@@ -27,8 +27,8 @@ export default function SignIn({navigation}) {
         })
         )
     }
-    useEffect(() => {
-        currentUser ?
+    useEffect( () => {
+     currentUser ?
         navigation.navigate('UserHome'):
         console.log('Login Failed. Please try again.')
     }, [currentUser])
@@ -40,10 +40,9 @@ export default function SignIn({navigation}) {
     // }
     const handleSubmit = async () => {
         const res = await loginUser({user: userForm})
-        setCurrentUser(res)
+        const verify = await verifyUser()
+        setCurrentUser(verify)
         console.log(res)
-        let token = await AsyncStorage.getItem('authToken')
-        console.log(token)
     }
     let { username, password } = userForm
     return(

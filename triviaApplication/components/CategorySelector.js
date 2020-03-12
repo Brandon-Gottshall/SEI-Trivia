@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import Button from './shared/Button'
 import ListItem from './shared/ListItem'
+import { readAllCategories } from '../services/api-helper'
 
 export default function CategorySelector({navigation}) {
 
