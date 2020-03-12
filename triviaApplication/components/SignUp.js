@@ -1,36 +1,98 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native'
 import Button from './shared/Button'
+import axios from 'axios'
+import { registerUser } from '../services/api-helper'
 import ModalDropdown from 'react-native-modal-dropdown'
 
-export default function SignUp() {
-    const [userName, setUserName] = useState('')
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const handleUsernameChange = () => {
-        set
+export default function SignUp({navigation}) {
+    const [userForm, setUserForm] = useState({
+        username: '',
+        first_name: '',
+        last_name: '',
+        password: '',
+        email: '',
+        cohort_id: 1,
+        role: 'student',
+        access: false
+    })
+    const navigateToSignIn = () => {
+        navigation.navigate('SignIn')
     }
+    const handleUsernameChange = (e) => {
+        console.log(e)
+        setUserForm(prevState => ({
+            ...prevState,
+            username: e
+        })
+        )
+    }
+    const handleFirstnameChange = (e) => {
+        console.log(e)
+        setUserForm(prevState => ({
+            ...prevState,
+            first_name: e
+        })
+    )
+    }
+    const handleLastnameChange = (e) => {
+        console.log(e)
+        setUserForm(prevState => ({
+            ...prevState,
+            last_name: e
+        })
+    )
+    }
+    const handlePasswordChange = (e) => {
+        console.log(e)
+        setUserForm(prevState => ({
+            ...prevState,
+            password: e
+        })
+        )
+    }
+    const handleEmailChange = (e) => {
+        console.log(e)
+        setUserForm(prevState => ({
+            ...prevState,
+            email: e
+        })
+        )
+    }
+    // const handleSubmit = () => {
+    //     let data = { user: userForm }
+    //     // e.preventDefault()
+    //     let res = axios.post('http://localhost:3000/users', data)
+    //     console.log(res)
+    //     navigation.navigate('SignIn')
+    // }
+    const handleSubmit = () => {
+        let res = registerUser(userForm)
+        // e.preventDefault()
+        console.log(res)
+        navigation.navigate('SignIn')
+    }
+
+    let { username, first_name, last_name, password, email } = userForm
     return(
         <View style={styles.container}>
             <Text style={styles.text}>Sign-Up</Text>
             <TextInput
               style={styles.input}
               onChangeText={handleUsernameChange}
-              value={userName}
+              value={username}
               placeholder='User Name'
             />
             <TextInput
               style={styles.input}
               onChangeText={handleFirstnameChange}
-              value={firstName}
+              value={first_name}
               placeholder='First Name'
             />
             <TextInput
               style={styles.input}
               onChangeText={handleLastnameChange}
-              value={lastName}
+              value={last_name}
               placeholder='Last Name'
             />
             <TextInput
@@ -51,6 +113,7 @@ export default function SignUp() {
             style={styles.dropdown} textStyle={styles.dropdownText} dropdownStyle={styles.dropdownDrawer}
             dropdownTextStyle={styles.dropdownTextStyle}
             options={['Blizzard']}/>
+
             {
                 // While this does work, turns out, it's probably
                 //  best to avoid using a dropdown on mobile.
@@ -60,11 +123,9 @@ export default function SignUp() {
                 //  Will likely implement for pmvp
             }
 
-            <Button text="Create Account" color='rgb(81,57,242)'/>
+            <Button text="Create Account" color='rgb(81,57,242)' helper={handleSubmit}/>
         </View>
-
-    )
-}
+    )}
 
 const styles = StyleSheet.create({
     container: {
