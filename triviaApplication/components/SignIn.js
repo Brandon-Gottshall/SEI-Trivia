@@ -15,7 +15,7 @@ export default function SignIn({navigation}) {
     const handleUsernameChange = (e) => {
         console.log(e)
         setUserForm(prevState => ({
-            ...prevState,
+                ...prevState,
             username: e
         }))
     }

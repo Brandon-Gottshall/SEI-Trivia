@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     post '/auth/login', to: 'authentication#login'
     get '/auth/verify', to: 'authentication#verify'
+    get '/questions/:cat_id', to: 'questions#show_by_cat'
     resources :questions
     resources :categories
     resources :units

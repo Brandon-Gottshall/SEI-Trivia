@@ -28,6 +28,10 @@ export const readAllCategories = async () => {
   const resp = await api.get('/categories')
   return resp.data
 }
+export const getQuestionsByCatId = async () => {
+  const resp = await api.get('/categories/cat_id')
+  return resp.data
+}
 
 export const verifyUser = async () => {
   const token = await AsyncStorage.getItem('authToken');

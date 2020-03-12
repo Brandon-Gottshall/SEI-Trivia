@@ -14,6 +14,12 @@ class QuestionsController < ApplicationController
     render json: @question
   end
 
+  def show_by_cat
+    temp_questions = Questions.where(
+        category_id: params[:cat_id]
+    )
+    render json: temp_questions
+  end
   # POST /questions
   def create
     @question = Question.new(question_params)
