@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native'
-
+import { getQuestionsByCatId } from '../services/api-helper'
 export default function Loading({route, navigation}) {
 
 const { data } = route.params
