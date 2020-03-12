@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19003,
-  "packagerPid": 22627,
-  "expoServerNgrokUrl": "https://h4-u3h.anonymous.triviaapplication.exp.direct",
-  "packagerNgrokUrl": "https://packager.h4-u3h.anonymous.triviaapplication.exp.direct",
-  "ngrokPid": 22652
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }

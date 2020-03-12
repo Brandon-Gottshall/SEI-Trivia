@@ -7,38 +7,31 @@ import { readAllCategories } from '../services/api-helper'
 export default function CategorySelector({navigation}) {
 
 const [updated, setUpdated] = useState(false)
-const [callData, setCallData] = useState([
-    {
-        id: '1',
-        title: 'HTML',
-        selected: false
-    },
-    {
-        id: '2',
-        title: 'CSS',
-        selected: false
-
-    },
-    {
-        id: '3',
-        title: 'JS Arrays',
-        selected: false
-    }
-])
+const [callData, setCallData] = useState([])
 const allButton = [
     {
-    id: '0',
-    title: 'All',
+    id: 0,
+    name: 'All',
     selected: false
     }]
 const [ data, setData ] = useState([])
 
 
+useEffect(async () => {
+    const apiData = await readAllCategories()
+    await console.log(apiData)
+    const tempData = apiData.map((category) => {
+        category.selected = false
+        return category
+    })
+    await console.log(tempData)
+    await setCallData(tempData)
+}, []);
 useEffect(() => {
     let conArr = [...allButton]
     conArr.push(...callData)
     setData(conArr)
-}, []);
+}, [callData]);
 
 const setButtonsSelected = (index) => {
     let newData = data;
@@ -82,11 +75,11 @@ const navigateToLoading = () => {
             <FlatList
                 data={data}
                 extraData={updated}
-                keyExtractor={item => item.id}
+                keyExtractor={item => item.id.toString()}
                 contentContainerStyle={{flex: 1,}}
                 renderItem={({ item, index }) => (
                     // ListItem = ({ title, index, selected, setButtonsSelected })
-                    <ListItem title={item.title} index={index} selected={data[index]["selected"]} setButtonsSelected={setButtonsSelected}/>
+                    <ListItem name={item.name} index={index} selected={data[index]["selected"]} setButtonsSelected={setButtonsSelected}/>
                 )}
                 />
             <Button text="Next" helper={navigateToLoading}/>

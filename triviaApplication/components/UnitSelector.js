@@ -10,7 +10,7 @@ const [updated, setUpdated] = useState(false)
 const [callData, setCallData] = useState([])
 const allButton = [
     {
-    id: '0',
+    id: 0,
     name: 'All',
     selected: false
     }]
@@ -25,9 +25,6 @@ useEffect(async () => {
     })
     await console.log(tempData)
     await setCallData(tempData)
-    // let conArr = [...allButton]
-    // await conArr.push(...callData)
-    // await setData(conArr)
 }, []);
 useEffect(() => {
     let conArr = [...allButton]
@@ -75,7 +72,7 @@ const navigateToCategorySelector = () => {
             <FlatList
                 data={data}
                 extraData={updated}
-                keyExtractor={item => item.id}
+                keyExtractor={item => item.id.toString()}
                 contentContainerStyle={{flex: 1,}}
                 renderItem={({ item, index }) => (
                     // ListItem = ({ title, index, selected, setButtonsSelected })
