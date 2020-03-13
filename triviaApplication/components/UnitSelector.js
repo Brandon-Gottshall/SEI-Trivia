@@ -23,7 +23,6 @@ useEffect(async () => {
         unit.selected = false
         return unit
     })
-    await console.log(tempData)
     await setCallData(tempData)
 }, []);
 useEffect(() => {
@@ -57,7 +56,6 @@ const setButtonsSelected = (index) => {
         setData(newData)
     }
     setUpdated(!updated)
-    console.log(newData)
 }
 const navigateToCategorySelector = () => {
     if (data[1]["selected"]){

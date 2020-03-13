@@ -19,12 +19,10 @@ const [ data, setData ] = useState([])
 
 useEffect(async () => {
     const apiData = await readAllCategories()
-    await console.log(apiData)
     const tempData = apiData.map((category) => {
         category.selected = false
         return category
     })
-    await console.log(tempData)
     await setCallData(tempData)
 }, []);
 useEffect(() => {
@@ -58,7 +56,6 @@ const setButtonsSelected = (index) => {
         setData(newData)
     }
     setUpdated(!updated)
-    console.log(newData)
 }
 const navigateToLoading = () => {
     if (data[1]["selected"]){

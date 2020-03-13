@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
   end
 
   def show_by_cat
-    temp_questions = Questions.where(
+    temp_questions = Question.where(
         category_id: params[:cat_id]
     )
     render json: temp_questions

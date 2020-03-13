@@ -22,7 +22,6 @@ buttonChecker(4)
 }
 
 const buttonChecker = (ans) => {
-    console.log('Correct or Incorrect')
     setCorI(ans == correct_ans)
     setAnswered(true)
     // navigateToGame(questionsWaiting)
@@ -48,7 +47,7 @@ const CorrectOrIncorrect = () => {
         <View style={styles.container}>
             <Text style={styles.text}>Question {qNum} of 10</Text>
             <Text style={styles.text}>{cOrI ? 'Correct' : 'Incorrect'}</Text>
-            
+
             <Button text='Next' helper={setAndNav} />
         </View>
     )

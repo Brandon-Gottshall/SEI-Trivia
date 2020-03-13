@@ -20,7 +20,6 @@ export default function SignUp({navigation}) {
         navigation.navigate('SignIn')
     }
     const handleUsernameChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
             ...prevState,
             username: e
@@ -28,7 +27,6 @@ export default function SignUp({navigation}) {
         )
     }
     const handleFirstnameChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
             ...prevState,
             first_name: e
@@ -36,7 +34,6 @@ export default function SignUp({navigation}) {
     )
     }
     const handleLastnameChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
             ...prevState,
             last_name: e
@@ -44,7 +41,6 @@ export default function SignUp({navigation}) {
     )
     }
     const handlePasswordChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
             ...prevState,
             password: e
@@ -52,24 +48,15 @@ export default function SignUp({navigation}) {
         )
     }
     const handleEmailChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
             ...prevState,
             email: e
         })
         )
     }
-    // const handleSubmit = () => {
-    //     let data = { user: userForm }
-    //     // e.preventDefault()
-    //     let res = axios.post('http://localhost:3000/users', data)
-    //     console.log(res)
-    //     navigation.navigate('SignIn')
-    // }
+
     const handleSubmit = async () => {
         let res = await registerUser(userForm)
-        // e.preventDefault()
-        console.log(res)
         navigation.navigate('SignIn')
     }
 

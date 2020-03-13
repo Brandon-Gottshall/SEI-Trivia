@@ -5,15 +5,18 @@ import WelcomeBlock from './shared/WelcomeBlock'
 import { MaterialIcons } from '@expo/vector-icons'
 import RMS from '../helperFunctions'
 
-export default function UserHome({navigation}) {
 
+
+export default function UserHome({route, navigation}) {
+    const { first_name } = route.params.user
+    console.log(route.params)
 
     const navigateToProfileSettings = () => navigation.navigate('ProfileSettings')
     const navigateToUnitSelector = () => navigation.navigate('UnitSelector')
 
     return(
         <View style={styles.container}>
-            <WelcomeBlock/>
+            <WelcomeBlock name={first_name}/>
             <View style={styles.buttonContainer} >
                 <Button text='Play' color='rgb(81,57,242)' helper={navigateToUnitSelector}/>
                 <Button text='Profile' color='rgb(81,57,242)' helper={navigateToProfileSettings}/>

@@ -11,16 +11,15 @@ export default function SignIn({navigation}) {
         password: ''
     })
     const [currentUser, setCurrentUser] = useState(null)
+    const [userDetails, setUserDetails] = useState(null)
 
     const handleUsernameChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
                 ...prevState,
             username: e
         }))
     }
     const handlePasswordChange = (e) => {
-        console.log(e)
         setUserForm(prevState => ({
             ...prevState,
             password: e
@@ -29,20 +28,14 @@ export default function SignIn({navigation}) {
     }
     useEffect( () => {
      currentUser ?
-        navigation.navigate('UserHome'):
-        console.log('Login Failed. Please try again.')
+        navigation.navigate('UserHome', {user: userDetails}):
+        null
     }, [currentUser])
-    // const handleSubmit = () => {
-    //     let data = { user: userForm }
-    //     // e.preventDefault()
-    //     let res = axios.post('http://localhost:3000/auth/login', data)
-    //     console.log(res)
-    // }
     const handleSubmit = async () => {
         const res = await loginUser({user: userForm})
+        setUserDetails(res)
         const verify = await verifyUser()
         setCurrentUser(verify)
-        console.log(res)
     }
     let { username, password } = userForm
     return(

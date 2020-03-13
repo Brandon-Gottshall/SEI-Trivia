@@ -13,6 +13,10 @@ export const loginUser = async (loginData) => {
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.user
 }
+export const getUser = async (id) => {
+    const resp = await api.get(`/users/${id}`)
+    return resp.data
+}
 
 export const registerUser = async (registerData) => {
   const resp = await api.post('/users/', { user: registerData })
@@ -29,7 +33,7 @@ export const readAllCategories = async () => {
   return resp.data
 }
 export const getQuestionsByCatId = async (cat_id) => {
-  const resp = await api.get(`/categories/${cat_id}`)
+  const resp = await api.get(`/questions/${cat_id}`)
   return resp.data
 }
 

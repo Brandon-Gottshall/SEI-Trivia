@@ -11,7 +11,6 @@ export default function ListItem({ name, index, selected, setButtonsSelected }) 
             style={unitStyleSelector}
             onPress={() => {
                 setButtonsSelected(index)
-                console.log(`${name} selected? : ${selected}`)
             }}
             >
             <Text style={unitTextStyleSelector}>{name}</Text>

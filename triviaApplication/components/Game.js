@@ -4,11 +4,12 @@ import Question from './shared/Question'
 
 export default function Game({route, navigation}) {
     const { questions } = route.params
+    console.log(route)
 
     const [questionsWaiting, setQuestionsWaiting] = useState([])
-    const [completedQuestions, setCompletedQuestions] = useState()
+    const [completedQuestions, setCompletedQuestions] = useState([])
 
-    useEffect(() => setQuestionsWaiting(questions),[])
+    useEffect(() => setQuestionsWaiting(questions),[questions])
 
     const navigateToGame = (questions) => {
         navigation.navigate('Game', {
@@ -27,7 +28,6 @@ export default function Game({route, navigation}) {
     return (
         <View style={styles.container}>
             {render()}
-            <Text>HELP from GAME</Text>
         </View>
     )
 }
