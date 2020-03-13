@@ -11,7 +11,7 @@ export default function UserHome({route, navigation}) {
     const { first_name } = route.params.user
     console.log(route.params)
 
-    const navigateToProfileSettings = () => navigation.navigate('ProfileSettings')
+    const navigateToProfileSettings = () => navigation.navigate('ProfileSettings', {first_name: first_name})
     const navigateToUnitSelector = () => navigation.navigate('UnitSelector')
 
     return(

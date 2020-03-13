@@ -4,15 +4,17 @@ import { MaterialIcons } from '@expo/vector-icons'
 import Button from './shared/Button'
 import WelcomeBlock from './shared/WelcomeBlock'
 
-export default function ProfileSettings() {
+export default function ProfileSettings({route}) {
+    const { first_name } = route.params
     return (
         <View style={styles.container}>
 
-            <WelcomeBlock/>
+            <WelcomeBlock name={first_name}/>
             <View style={styles.buttonContainer}>
                 <Button text="Change Profile Picture"/>
                 <Button text="Change Password"/>
                 <Button text="Change Cohort"/>
+                <Button text="Delete User"/>
             </View>
         </View>
     )
