@@ -1,5 +1,29 @@
 # SEI Trivia
 
+Historical full-stack trivia project spanning Rails and mobile clients.
+
+This repo is kept public as a portfolio case study. It shows an early attempt to build a learning product around short review sessions, user accounts, categories, question delivery, and instructor-managed content.
+
+## What It Shows
+
+- Product thinking around learning loops and fast review sessions.
+- Full-stack planning across a Rails API and a mobile client.
+- A strong candidate for a future v2 because the learning-tool idea still maps directly to current review-game work.
+
+## Chronology
+
+- Original version: General Assembly SEI project.
+- Restoration pass: dependency cleanup across the JavaScript/mobile side and Rails lockfile work.
+- Future v2: connect the original review-game idea to a more durable content model, better instructor workflows, and current frontend/mobile patterns.
+
+## Maintenance Status
+
+Historical project, currently being restored. The dependency graph has been partially modernized, but full runtime verification still needs a Rails/Ruby environment pass.
+
+---
+
+# Original SEI Trivia Plan
+
 - [SEI Trivia](#Full-Stack-Project)
   - [Overview](#Overview)
     - [Permissions](#Permissions)
