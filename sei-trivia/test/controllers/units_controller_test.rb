@@ -12,7 +12,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create unit" do
     assert_difference('Unit.count') do
-      post units_url, params: { unit: { cohort_id: @unit.cohort_id, display: @unit.display, name: @unit.name } }, as: :json
+      post units_url, params: { unit: { cohort_id: cohorts(:one).id, display: @unit.display, name: 'New unit' } }, headers: auth_headers, as: :json
     end
 
     assert_response 201
@@ -24,13 +24,13 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update unit" do
-    patch unit_url(@unit), params: { unit: { cohort_id: @unit.cohort_id, display: @unit.display, name: @unit.name } }, as: :json
+    patch unit_url(@unit), params: { unit: { cohort_id: cohorts(:one).id, display: @unit.display, name: @unit.name } }, headers: auth_headers, as: :json
     assert_response 200
   end
 
   test "should destroy unit" do
     assert_difference('Unit.count', -1) do
-      delete unit_url(@unit), as: :json
+      delete unit_url(@unit), headers: auth_headers, as: :json
     end
 
     assert_response 204

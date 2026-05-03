@@ -12,7 +12,7 @@ class CohortsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cohort" do
     assert_difference('Cohort.count') do
-      post cohorts_url, params: { cohort: { name: @cohort.name } }, as: :json
+      post cohorts_url, params: { cohort: { name: @cohort.name } }, headers: auth_headers, as: :json
     end
 
     assert_response 201
@@ -24,13 +24,13 @@ class CohortsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cohort" do
-    patch cohort_url(@cohort), params: { cohort: { name: @cohort.name } }, as: :json
+    patch cohort_url(@cohort), params: { cohort: { name: @cohort.name } }, headers: auth_headers, as: :json
     assert_response 200
   end
 
   test "should destroy cohort" do
     assert_difference('Cohort.count', -1) do
-      delete cohort_url(@cohort), as: :json
+      delete cohort_url(@cohort), headers: auth_headers, as: :json
     end
 
     assert_response 204

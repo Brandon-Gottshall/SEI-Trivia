@@ -12,7 +12,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create category" do
     assert_difference('Category.count') do
-      post categories_url, params: { category: { name: @category.name, unit_id: @category.unit_id } }, as: :json
+      post categories_url, params: { category: { name: 'New category', unit_id: units(:one).id } }, headers: auth_headers, as: :json
     end
 
     assert_response 201
@@ -24,13 +24,13 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update category" do
-    patch category_url(@category), params: { category: { name: @category.name, unit_id: @category.unit_id } }, as: :json
+    patch category_url(@category), params: { category: { name: @category.name, unit_id: units(:one).id } }, headers: auth_headers, as: :json
     assert_response 200
   end
 
   test "should destroy category" do
     assert_difference('Category.count', -1) do
-      delete category_url(@category), as: :json
+      delete category_url(@category), headers: auth_headers, as: :json
     end
 
     assert_response 204

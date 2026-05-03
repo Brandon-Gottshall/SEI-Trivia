@@ -3,7 +3,6 @@ import {View, Text, StyleSheet, TextInput} from 'react-native'
 import Button from './shared/Button'
 import axios from 'axios'
 import { registerUser } from '../services/api-helper'
-import ModalDropdown from 'react-native-modal-dropdown'
 
 export default function SignUp({navigation}) {
     const [userForm, setUserForm] = useState({
@@ -96,10 +95,9 @@ export default function SignUp({navigation}) {
               placeholder='Password'
             />
 
-        <ModalDropdown
-            style={styles.dropdown} textStyle={styles.dropdownText} dropdownStyle={styles.dropdownDrawer}
-            dropdownTextStyle={styles.dropdownTextStyle}
-            options={['Blizzard']}/>
+            <View style={styles.dropdown}>
+                <Text style={styles.dropdownText}>Blizzard</Text>
+            </View>
 
             {
                 // While this does work, turns out, it's probably
@@ -148,17 +146,4 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         top: 10
     },
-    dropdownDrawer: {
-        width: 250,
-        // This will needed to be changed once more cohorts are added.
-        // I will end up mapping in cohorts.
-        // Set height to cohorts.length * 35
-        height: 35,
-        marginTop: 30,
-        borderWidth: 0
-    },
-    dropdownTextStyle: {
-        backgroundColor: 'rgb(29,138,197)',
-        color: 'white'
-    }
 })

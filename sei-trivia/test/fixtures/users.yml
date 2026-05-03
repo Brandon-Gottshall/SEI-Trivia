@@ -1,21 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_name: MyString
-  password_digest: MyString
-  cohort_id: 1
+  username: MyString
+  password_digest: <%= BCrypt::Password.create('password') %>
+  cohort: one
   profile_img_url: MyString
   first_name: MyString
   last_name: MyString
   role: MyString
   access: false
+  email: one@example.com
 
 two:
-  user_name: MyString
-  password_digest: MyString
-  cohort_id: 1
+  username: OtherString
+  password_digest: <%= BCrypt::Password.create('password') %>
+  cohort: two
   profile_img_url: MyString
   first_name: MyString
   last_name: MyString
   role: MyString
   access: false
+  email: two@example.com

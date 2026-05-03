@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  category_id: 1
+  category: one
   prompt: MyString
   ans_1: MyString
   ans_2: MyString
@@ -10,10 +10,10 @@ one:
   correct_ans: 1
 
 two:
-  category_id: 1
-  prompt: MyString
-  ans_1: MyString
-  ans_2: MyString
-  ans_3: MyString
-  ans_4: MyString
+  category: two
+  prompt: OtherString
+  ans_1: OtherString
+  ans_2: OtherString
+  ans_3: OtherString
+  ans_4: OtherString
   correct_ans: 1
